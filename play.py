@@ -70,9 +70,10 @@ def run():
     word = random.choice(DB)
     spaces = ["_"] * len(word)
     attemps = 6
+    clear = "clear"
 
     while True:
-        os.system("clear")
+        os.system(clear)
         for character in spaces:
             print(character, end=" ")
         print(IMAGES[attemps])
@@ -88,13 +89,13 @@ def run():
             attemps -= 1 
         
         if "_" not in spaces:
-            os.system("clear")
+            os.system(clear)
             print("Bien Hecho Ganaste!!")
             break
             input()
         
         if attemps == 0:
-            os.system("clear")
+            os.system(clear)
             print("Lo siento sigue intentando perdiste")
             break
             input()
